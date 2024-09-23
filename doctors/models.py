@@ -11,7 +11,7 @@ class Doctor(models.Model):
     biography = models.TextField()
 
 
-class Deparment(models.Model):
+class Department(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
 
