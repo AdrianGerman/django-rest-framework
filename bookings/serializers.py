@@ -6,7 +6,7 @@ from .models import Appointment, MedicalNote
 class AppointmentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Appointment
-        field = "__all__"
+        fields = "__all__"
 
 
 class MedicalNoteSerializer(serializers.ModelSerializer):

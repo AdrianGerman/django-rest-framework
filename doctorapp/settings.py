@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     "patients",
     "doctors",
     "bookings",
+    "docs",
+    "drf_spectacular",
 ]
 
 MIDDLEWARE = [
@@ -125,3 +127,15 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+REST_FRAMEWORK = {
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+}
+
+SPECTACULAR_SETTINGS = {
+    "TITLE": "Hospitals API's🏥",
+    "DESCRIPTION": "Schedule your turn➕",
+    "VERSION": "0.0.1",
+    "SERVE_INCLUDE_SCHEMA": False,
+}
